@@ -30,13 +30,15 @@ java JDK >= 1.8.0
 
 ## How to use ##
 ##### Download from github
-Run `git clone https://github.com/monaen/Projects/PrivacyDecisionTree.git`
+Run `git clone https://github.com/monaen/PrivacyDecisionTree.git`
 
 ##### Run the project at local
 ```
-cd 
+cd PrivacyDecisionTree/src
+javac PrivacyID3.java
+java PrivacyID3
 ```
-
-
+## Algorithm illustration ##
+* [Privacy Decision Tree Algorithm](http://monaen.github.io/PrivacyDecisionTree)
 
 
