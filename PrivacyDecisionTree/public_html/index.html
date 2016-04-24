@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title> Privacy Decision Tree </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+            /*body { 
+              font-family: 'Open Sans', sans-serif;
+              color: #666;
+            }*/
+
+            /* STRUCTURE */
+
+            #pagewrap {
+                    padding: 5px;
+                    width: 960px;
+                    margin: 20px auto;
+            }
+            header {
+                    height: auto;
+                    padding: 0 15px;
+            }
+            #content {
+                    width: 300px;
+                    float: left;
+                    padding: 5px 15px;
+            }
+
+            #middle {
+                    width: 80px; /* Account for margins + border values */
+                    float: left;
+                    padding: 5px 15px;
+                    margin: 0px 5px 5px 5px;
+            }
+
+            #sidebar {
+                    width: 470px;
+                    padding: 5px 15px;
+                    float: left;
+            }
+            
+            /******************************************************************/
+            #column_left {
+                    width: 280px;
+                    float: left;
+                    padding: 5px 15px;
+                    height: 240px;
+            }
+            
+            #column_middle {
+                    width: 280px; /* Account for margins + border values */
+                    float: left;
+                    padding: 5px 15px;
+                    margin: 0px 5px 5px 5px;
+                    height: 240px;
+            }
+            
+            
+            #column_right {
+                    width: 280px;
+                    padding: 5px 15px;
+                    float: left;
+                    height: 240px;
+            }
+            /******************************************************************/
+            
+            
+            footer {
+                    clear: both;
+                    padding: 20px 15px;
+            }
+            
+            
+            #two_column_left{
+                    width: 400px;
+                    padding: 5px 15px;
+                    float: left;
+            }
+            #two_column_right{
+                    width: 400px;
+                    padding: 5px 15px;
+                    float: right;
+            }
+            
+            
+            
+            /************************************************************************************
+            MEDIA QUERIES
+            *************************************************************************************/
+            /* for 980px or less */
+            @media screen and (max-width: 980px) {
+
+                    #pagewrap {
+                            width: 94%;
+                    }
+                    #content {
+                            width: 41%;
+                            padding: 1% 4%;
+                    }
+                    #middle {
+                            width: 41%;
+                            padding: 1% 4%;
+                            margin: 0px 0px 5px 5px;
+                            float: right;
+                    }
+
+                    #sidebar {
+                            clear: both;
+                            padding: 1% 4%;
+                            width: auto;
+                            float: none;
+                    }
+
+                    header, footer {
+                            padding: 1% 4%;
+                    }
+            }
+
+            /* for 700px or less */
+            @media screen and (max-width: 600px) {
+
+                    #content {
+                            width: auto;
+                            float: none;
+                    }
+
+                    #middle {
+                            width: auto;
+                            float: none;
+                            margin-left: 0px;
+                    }
+
+                    #sidebar {
+                            width: auto;
+                            float: none;
+                    }
+
+            }
+
+            /* for 480px or less */
+            @media screen and (max-width: 480px) {
+
+                    header {
+                            height: auto;
+                    }
+                    h1 {
+                            font-size: 2em;
+                    }
+                    #sidebar {
+                            display: none;
+                    }
+
+            }
+
+
+            #content {
+                background: #ffffff;
+            }
+            #sidebar {
+                background: #ffffff;
+            }
+            header, #content, #middle, #sidebar {
+                margin-bottom: 5px;
+            }
+
+            #pagewrap, header, #content, #middle, #sidebar, footer {
+                border: solid 0px #ccc;
+            }
+            
+            
+            .tg  {border-collapse:collapse;border-spacing:0;border-color:#aabcfe;}
+            .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#669;background-color:#e8edff;}
+            .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aabcfe;color:#039;background-color:#b9c9fe;}
+            .tg .tg-baqh{text-align:center;vertical-align:top}
+            .tg .tg-mb3i{background-color:#D2E4FC;text-align:right;vertical-align:top}
+            .tg .tg-lqy6{text-align:right;vertical-align:top}
+            .tg .tg-6k2t{background-color:#D2E4FC;vertical-align:top}
+            .tg .tg-yw4l{vertical-align:top}
+            
+            
+            
+            .container {
+                position: relative;
+                width: 960px;
+            }
+            .container div {
+                height: 300px;
+            }
+
+            .column-left {
+                width: 33%;
+                left: 0;
+                position: absolute;
+            }
+            .column-center {
+                width: 34%;
+                margin-left: 33%;
+                position: absolute;
+            }
+            .column-right {
+                width: 33%;
+                right: 0;
+                position: absolute;
+            }
+            
+            
+            
+            
+            
+        </style>
+        
+        
+        <script type="text/javascript" async
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+            });
+        </script>
+    </head>
+    <body>
+        
+    <div id="pagewrap">
+
+	<header>
+            <h1 align="center">Privacy Decision Tree (Two-party jointly build decision tree)</h1>
+            <p align="center" ><font size = "4">author: <a href="http://naenmong.com">Nan Meng</a></font></p>
+            <p align="center" ><font size = "4">project repository: <a href="https://github.com/monaen/Projects/tree/gh-pages/PrivacyDecisionTree">PrivacyDecisionTree</a></font></p>
+            <h2>Motivation</h2>
+            <p align="justify">
+            Decision tree is a traditional algorithm using tree structure to do the 
+            classification and regression. The algorithm break down a dataset into smaller 
+            and smaller subsets. This algorithm has been widely used for many years, however, in some private 
+            situation one cannot only use the traditional information to do the classification. The privacy of 
+            important information should be also take into consideration. Thus, we here implement a revised decision tree 
+            algorithm to do the task in privacy situation.
+            The following section will fist introduce the 
+            traditional ID3 algorithm, and then illustrate the two-party joint decision
+            tree construction algorithms.
+            
+        </p>
+        
+        <h2>ID3 Algorithm</h2>
+        <p align="justify">The algorithm used for building decision tree is <strong>ID3</strong> by J.R.Quinlan 
+             whose method employs a top-down, greedy search through the space of possible branches with no backtracking. 
+             ID3 uses Entropy and Information Gain to construct a decision tree. Next we use an example to illustrate how the algorithm implement
+        </p>
+        <h2>Dataset</h2>
+        <p>The dataset used for explain how the ID3 algorithm work is the 
+            well-known <strong>play golf</strong> dataset shown as follows. The 
+            right side displays the whole structure of the constructed decision 
+            tree.
+        </p>
+
+	</header>
+		
+	<section id="content">
+		<h2 align="center">Play Golf Dataset</h2>
+                <table>
+                    <tr>
+                      <th>Outlook</th>
+                      <th>Temp</th>
+                      <th>Humidity</th>
+                      <th>Windy</th>
+                      <th align="center">Play Golf</th>
+                    </tr>
+                    <tr>
+                      <td>Rainy</td>
+                      <td>Hot</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">No</td>
+                    </tr>
+                    <tr>
+                      <td>Rainy</td>
+                      <td>Hot</td>
+                      <td>High</td>
+                      <td>True</td>
+                      <td align="center">No</td>
+                    </tr>
+                    <tr>
+                      <td>Overcast</td>
+                      <td>Hot</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Mild</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Cool</td>
+                      <td>Normal</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Cool</td>
+                      <td>Normal</td>
+                      <td>True</td>
+                      <td align="center">No</td>
+                    </tr>
+                    <tr>
+                      <td>Overcast</td>
+                      <td>Cool</td>
+                      <td>Normal</td>
+                      <td>True</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Rainy</td>
+                      <td>Mild</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">No</td>
+                    </tr>
+                    <tr>
+                      <td>Rainy</td>
+                      <td>Cool</td>
+                      <td>Normal</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Mild</td>
+                      <td>Normal</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td >Rainy</td>
+                      <td >Mild</td>
+                      <td >Normal</td>
+                      <td >True</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td >Overcast</td>
+                      <td>Mild</td>
+                      <td>High</td>
+                      <td>True</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Overcast</td>
+                      <td>Hot</td>
+                      <td>Normal</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Mild</td>
+                      <td>High</td>
+                      <td>True</td>
+                      <td align="center">No</td>
+                    </tr>
+                </table>
+	</section>
+	
+	<div id="middle" style="vertical-align: middle">
+            <br><br><br><br><br><br><br><br>
+            <img src="arrows.svg" height = "80" 
+                     onerror="this.onerror=null; this.src='arrow.png'">
+            <br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+	<aside id="sidebar">
+		<object data="decisiontree.svg" type="image/svg+xml" height="400" width="480">
+                    <img src="decisiontree.jpg"/>
+                </object>
+	</aside>	
+	<footer>
+            
+            <h2>Entropy</h2>
+            <p align = "justify">
+                ID3 adopted an information based method and measure the homogeneity of 
+                dataset based on <strong>entropy</strong>.  If all the subset data belongs 
+                to a single class, i.e. the subset data is totally homogenous, the 
+                entropy is zero and if all the subset data evenly divided into each class, 
+                the entropy is one. More generally, if dataset $D$ contain $p$ objects of class $P$ 
+                and $n$ of class $N$. An arbitrary object will be classified to class $P$ 
+                with probability $p/(p+n)$ and to class $N$ with probability $n/(p+n)$.
+            </p>
+            <p align="center">
+                <img src="http://latex.codecogs.com/gif.latex?Entropy = I(p,n) = -\frac{p}{p+n} \times log_{2}(\frac{p}{p+n}) - \frac{n}{p+n} \times log_{2}(\frac{n}{p+n})" border="0"/>
+            </p>
+            <ul>
+                <li>a) Entropy of target class of the dataset(Whole entropy):<br>
+                    <div id="pagewrap">
+                        <p align="left" id="two_column_left">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp<img src="http://latex.codecogs.com/gif.latex?Entropy(PlayGolf)" border="0"/><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= Entropy(5, 9) = I(\frac{5}{5+9},\frac{9}{5+9})" border="0"/><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= I(0.36, 0.64)" border="0"/><br><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= -(0.36log_{2}0.36)-(0.64log_{2}0.64)" border="0"/><br><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= 0.94" border="0"/>
+                        </p>
+                        <div></div>
+                        <div align="center">
+                        <table width="150" class="tg">
+                            <tr>
+                                <th align="center" colspan="2">Play Golf</th>
+                            </tr>
+                            <tr>
+                                <td>Yes</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>5</td>
+                            </tr>
+                        </table>
+                        </div>
+                        <footer></footer>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <p align="justify">
+                If attribute $A$ has multiple values ${A_1,A_2,A_3,...,A_k}$, the decision tree 
+                will classify the dataset $D$ into ${D_1,D_2,D_3,...,D_k}$, where $D_i$ with the 
+                attribute value $A_i$ of attribute $A$. Assume that the subset $D_i$ contains $p_i$ 
+                objects of class $P$ and $n_i$ objects of class $N$. Then the expected information 
+                of subset $C_i$ is $I(p_i,n_i)$. The expected information for attribute $A$ is the 
+                summation of all the subset, which can be expressed as:
+                </p>
+                <p align="center">
+                <img src="http://latex.codecogs.com/gif.latex?Entropy(A) = \sum_{i=1}^{k}\frac{p_i+n_i}{p+n}I(p_i,n_i)" border="0"/>
+                </p>
+            </div>
+            <ul>
+                <li>b) Entropy of every attribute(take attribute <strong>Outlook</strong> for example).
+                    <div id="pagewrap">
+                        <p align="left" id="two_column_left">
+                        &nbsp&nbsp&nbsp&nbsp&nbsp<img src="http://latex.codecogs.com/gif.latex?Entropy(PlayGolf, Outlook)" border="0"/><br><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= P(Sunny) * E(3,2) + P(Overcast) * E(4,0) + P(Rainy) * E(2,3)" border="0"/><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= \frac{5}{14} \times I(0.6,0.4)+\frac{4}{14} \times I(1,0)+\frac{5}{14} \times I(0.4,0.6)" border="0"/><br>
+                        <img src="http://latex.codecogs.com/gif.latex?= 0.693" border="0"/><br>
+                        </p>
+                        <div></div>
+                        <div id="two_column_right" align="right">
+                        <table class="tg" width="360">
+                            <tr>
+                              <th colspan="2"></th>
+                              <th colspan="2">Play Golf</th>
+                              <th></th>
+                            </tr>
+                            <tr>
+                              <td colspan="2"></td>
+                              <td>Yes</td>
+                              <td>No</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td rowspan="3">Outlook</td>
+                              <td>Sunny</td>
+                              <td>3</td>
+                              <td>2</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td>Overcast</td>
+                              <td>4</td>
+                              <td>0</td>
+                              <td>4</td>
+                            </tr>
+                            <tr>
+                              <td>Rainy</td>
+                              <td>2</td>
+                              <td>3</td>
+                              <td>5</td>
+                            </tr>
+                            <tr>
+                              <td colspan="2"></td>
+                              <td></td>
+                              <td></td>
+                              <td>14</td>
+                            </tr>
+                        </table>
+                        </div>
+                        <footer></footer>
+                    </div>
+                </li>
+            </ul>
+            
+            <!-- The Information Gain-->
+            <h2>Information Gain</h2>
+            <p>The information gain by dividing dataset on attribute $A$ is the 
+                decrease in entropy after a dataset is split on attribute $A$. 
+                Thus, the calculation of attribute <strong>Outlook</strong> is:
+            </p>
+            <p align="center">
+                $Gain(Outlook) = Entropy(PlayGolf) - Entropy(PlayGolf, Outlook) = 0.940-0.693 = 0.247$
+            </p>
+            <p>The information gain of rest three attributes can be calculated in the
+                same way:
+            </p>
+            <p align = "center">
+                $Gain(Temp) = Entropy(PlayGolf) - Entropy(PlayGolf, Temp) = 0.029$<br><br>
+                $Gain(Humidity) = Entropy(PlayGolf) - Entropy(PlayGolf, Humidity) = 0.152$<br><br>
+                $Gain(Windy) = Entropy(PlayGolf) - Entropy(PlayGolf, Windy) = 0.048$
+            </p>
+            <p align="justify">Then choose the attribute with the largest information gain as the decision node. 
+                So the tree-forming method used in ID3 would choose <strong>Outlook</strong> as the attribute for 
+                the root of the decision tree. Based on the values of Outlook, the branch with entropy of zero is 
+                a leaf node and the branch with entropy larger than 0 needs further dividing.
+            </p>
+            <p>
+                The following steps of tree construction displayed as follows:
+            </p>
+            
+            <div id="pagewrap">
+                <div id="column_left" >
+                    <img src="decisiontree1.svg" width="400" onerror="this.src='decisiontree1.png'"/>
+                </div>
+                <div id="column_middle">
+                    <img src="decisiontree2.svg" width="400" onerror="this.src='decisiontree2.png'">
+                </div>
+                <div id="column_right">
+                    <img src="decisiontree3.svg" width="400" onerror="this.src='decisiontree3.png'">
+                </div>
+            </div>
+            <footer>
+            </footer>
+	</footer>
+        
+        <h2>Privacy Two-party ID3 Algorithm</h2>
+        <p align="justify">
+            The two-party ID3 algorithm is based on the traditional ID3 algorithm 
+            introduced above. The algorithm is proposed in order to deal with some 
+            practical situations. Assume that there are two organizations, and they 
+            both have some data, and they want to corperate with each other to 
+            mine some knowledge based on their data. However, these data involve 
+            confidential information of their organizations and they cannot share all 
+            the detailed information with each other, but they both still want to 
+            discover some interesting rules based on their data. The following parts 
+            we will introduce one intuitive approach to solve the problem.
+        </p>
+        <p>
+            Assuming that Angelina is the database manager of organization $A$, and Bob is the 
+            database manager of organization $B$. They both possessed part of the dataset, and 
+            in this example we assume that the joint of their dataset is the whole dataset.
+        </p>
+        <div id="pagewrap">
+            <div align="center" id="two_column_left">
+                <img src="Angelina.png" width="160">
+                <p>Angelina</p>
+                <section id="content">
+                    <h2 align="center">Angelina Dataset</h2>
+                <table>
+                    <tr>
+                      <th>Outlook</th>
+                      <th>Temp</th>
+                      <th>Humidity</th>
+                      <th>Windy</th>
+                      <th align="center">Play Golf</th>
+                    </tr>
+                    <tr>
+                      <td>Rainy</td>
+                      <td>Hot</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">No</td>
+                    </tr>
+                    <tr>
+                      <td>Rainy</td>
+                      <td>Hot</td>
+                      <td>High</td>
+                      <td>True</td>
+                      <td align="center">No</td>
+                    </tr>
+                    <tr>
+                      <td>Overcast</td>
+                      <td>Hot</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Mild</td>
+                      <td>High</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Cool</td>
+                      <td>Normal</td>
+                      <td>False</td>
+                      <td align="center">Yes</td>
+                    </tr>
+                    <tr>
+                      <td>Sunny</td>
+                      <td>Cool</td>
+                      <td>Normal</td>
+                      <td>True</td>
+                      <td align="center">No</td>
+                    </tr>
+                </table>
+                </section>
+            </div>
+            <div align="center" id="two_column_right">
+                <img src="Bob.png" width="160">
+                <p>Bob</p>
+                <section id="content">
+                    <h2 align="center">Bob Dataset</h2>
+                    <table>
+                        <tr>
+                          <th>Outlook</th>
+                          <th>Temp</th>
+                          <th>Humidity</th>
+                          <th>Windy</th>
+                          <th align="center">Play Golf</th>
+                        </tr>
+                        <tr>
+                          <td>Overcast</td>
+                          <td>Cool</td>
+                          <td>Normal</td>
+                          <td>True</td>
+                          <td align="center">Yes</td>
+                        </tr>
+                        <tr>
+                          <td>Rainy</td>
+                          <td>Mild</td>
+                          <td>High</td>
+                          <td>False</td>
+                          <td align="center">No</td>
+                        </tr>
+                        <tr>
+                          <td>Rainy</td>
+                          <td>Cool</td>
+                          <td>Normal</td>
+                          <td>False</td>
+                          <td align="center">Yes</td>
+                        </tr>
+                        <tr>
+                          <td>Sunny</td>
+                          <td>Mild</td>
+                          <td>Normal</td>
+                          <td>False</td>
+                          <td align="center">Yes</td>
+                        </tr>
+                        <tr>
+                          <td >Rainy</td>
+                          <td >Mild</td>
+                          <td >Normal</td>
+                          <td >True</td>
+                          <td align="center">Yes</td>
+                        </tr>
+                        <tr>
+                          <td >Overcast</td>
+                          <td>Mild</td>
+                          <td>High</td>
+                          <td>True</td>
+                          <td align="center">Yes</td>
+                        </tr>
+                        <tr>
+                          <td>Overcast</td>
+                          <td>Hot</td>
+                          <td>Normal</td>
+                          <td>False</td>
+                          <td align="center">Yes</td>
+                        </tr>
+                        <tr>
+                          <td>Sunny</td>
+                          <td>Mild</td>
+                          <td>High</td>
+                          <td>True</td>
+                          <td align="center">No</td>
+                        </tr>
+                    </table>
+                </section>
+            </div>         
+            <footer></footer>
+            <p>
+                If they build the decision tree based on their own 
+                dataset, they both will get a "tree" like:
+            </p>
+            <div id="pagewrap">
+            <div align="center" id="two_column_left">
+                <img src="Angelina.png" width="160">
+                <p>Angelina</p>
+                <div style="margin-left: 56px">
+                    <div id="column_left" >
+                        <img src="Angelinatree.svg" width="400" onerror="this.src='Angelinatree.png'"/>
+                    </div>
+                </div>
+            </div>
+            <div align="center" id="two_column_right">
+                    <img src="Bob.png" width="160">
+                <p>Bob</p>
+                <div style="margin-left: 56px">
+                    <div id="column_right" >
+                        <img src="Bobtree.svg" width="400" onerror="this.src='Bobtree.png'"/>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <footer>
+                <p>
+                    Apparently, the result is worse than the decision tree constructed 
+                    based on the original dataset. Now they want to build the same decision 
+                    tree shown above at step 3. From the algorithm illustrated above, 
+                    the decision tree has been constructed hierarchically. At every spliting node, 
+                    we need to calculate the information gain and it can be calculated if the 
+                    number of objects of each class are known. Thus, when Angelina wants to 
+                    construct a tree based on universal dataset, she only need to know the number 
+                    of objects of each class in Bob dataset.                    
+                </p>
+                <p>
+                    Let's define a new variable <strong>transInfo</strong> which contains the information about 
+                    number of objects of each class in Bob dataset. First, Angelina use the traditional algorithm 
+                    to determine which attribute should be the first one to divide the dataset, i.e. which attribute 
+                    should be the root. 
+                </p>
+                <p>
+                    When Angelina wants to calculate the information gain of <strong>Outlook</strong>, she first 
+                    count the number of objects belong to each class in her own dataset, and then based on the <strong>transInfo</strong>, 
+                    she will get the final result. The calculation is shown as follows:
+                </p>
+                
+            </footer>
+            <div id="pagewrap">
+                <div align="center" id="two_column_left">
+                    <img src="Angelina.png" width="160">
+                    <p>Angelina</p>
+                    <div style="margin-left: 56px">
+                        <div id="column_left" >
+                            <table class="tg" width="300">
+                                <tr>
+                                  <th colspan="2"></th>
+                                  <th colspan="2">Play Golf</th>
+                                  <th></th>
+                                </tr>
+                                <tr>
+                                  <td colspan="2"></td>
+                                  <td>Yes</td>
+                                  <td>No</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td rowspan="3">Outlook</td>
+                                  <td>Sunny</td>
+                                  <td>2</td>
+                                  <td>1</td>
+                                  <td>3</td>
+                                </tr>
+                                <tr>
+                                  <td>Overcast</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                </tr>
+                                <tr>
+                                  <td>Rainy</td>
+                                  <td>0</td>
+                                  <td>2</td>
+                                  <td>2</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2"></td>
+                                  <td style="color:#32cb00;">3</td>
+                                  <td style="color:#32cb00">3</td>
+                                  <td>6</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div align="center" id="two_column_right">
+                        <img src="Bob.png" width="160">
+                    <p>Bob</p>
+                    <div style="margin-left: 56px">
+                        <div id="column_right" >
+                            <table class="tg">
+                                <tr>
+                                  <th></th>
+                                  <th colspan="3">transInfo --&gt; Outlook</th>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td>Yes</td>
+                                  <td>No</td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td>Sunny</td>
+                                  <td>1</td>
+                                  <td>1</td>
+                                  <td>2</td>
+                                </tr>
+                                <tr>
+                                  <td>Overcast</td>
+                                  <td>3</td>
+                                  <td>0</td>
+                                  <td>3</td>
+                                </tr>
+                                <tr>
+                                  <td>Rainy</td>
+                                  <td>2</td>
+                                  <td>1</td>
+                                  <td>3</td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td style="color:#fe0000;">6</td>
+                                  <td style="color:#fe0000;">2</td>
+                                  <td>8</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer></footer>
+            <p>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                Thus, the information gain calculation is change to:
+            </p>
+            <div align="center">
+                <p align="left">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                $Gain(Outlook) = Entropy(PlayGolf, transInfo) - Entropy(PlayGolf, transInfo, Outlook)$ <br><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                $ = I(\frac{3+6}{3+3+6+2},\frac{3+2}{3+3+6+2}) - Entropy(PlayGolf, transInfo, Outlook)$<br><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                $ = I(\frac{3+6}{3+3+6+2},\frac{3+2}{3+3+6+2}) - (P(Sunny)*E(2+1,1+1)+P(Overcast)*E(1+3,0)+P(Rainy)*E(0+2,2+1))$<br><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                $ = I(0.36,0.64) - (\frac{5}{14} \times I(0.6,0.4)+\frac{4}{14} \times I(1,0)+\frac{5}{14} \times I(0.4,0.6))$<br><br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                $ = 0.94 - 0.693 = 0.247$
+                </p>
+                
+            </div>
+                <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    The information gain of rest three attributes can be calculated in the
+                    same way:
+                </p>
+            <p align = "center">
+                $Gain(Temp) = Entropy(PlayGolf,transInfo) - Entropy(PlayGolf, transInfo, Temp) = 0.029$<br><br>
+                $Gain(Humidity) = Entropy(PlayGolf,transInfo) - Entropy(PlayGolf, transInfo, Humidity) = 0.152$<br><br>
+                $Gain(Windy) = Entropy(PlayGolf,transInfo) - Entropy(PlayGolf, transInfo, Windy) = 0.048$
+            </p>
+            <p>
+                Thus the rest part of construction is similar with the traditional ID3 algorithm, and the only difference is 
+                every time when calculate the information gain, one should take both the Angelina data and transInfo into consideration.
+            </p>
+            
+            
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
