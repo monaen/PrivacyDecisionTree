@@ -11,15 +11,10 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  *
- * @author winfred
+ * @author Nan Meng
  */
 public class PrivacyID3 extends javax.swing.JFrame {
     
@@ -624,7 +619,7 @@ public class PrivacyID3 extends javax.swing.JFrame {
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
-        String URL = "http://monaen.github.io/Projects/PrivacyDecisionTree/public_html/index.html";
+        String URL = "http://monaen.github.io/PrivacyDecisionTree/";
         try {
             java.awt.Desktop.getDesktop().browse(java.net.URI.create(URL));
         } catch (IOException ex) {
