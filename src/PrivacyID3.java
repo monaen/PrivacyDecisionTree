@@ -613,7 +613,7 @@ public class PrivacyID3 extends javax.swing.JFrame {
         JFrame frame = new JFrame();
         //ok dialog
         String Copyright = new String();
-        Copyright = "Copyright \u00a9 2016, Nan Meng. All rights reserved.";
+        Copyright = "Copyright \u00a9 2016, Nan Meng";
         JOptionPane.showMessageDialog(frame, Copyright);
     }//GEN-LAST:event_jButton11ActionPerformed
 
