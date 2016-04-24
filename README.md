@@ -7,7 +7,7 @@ An extended version of decision tree for privacy data mining
 ## Download ##
 
 The whole project can be download from: 
-[https://github.com/monaen/Projects/PrivacyDecisionTree](https://github.com/monaen/Projects/PrivacyDecisionTree)
+[https://github.com/monaen/PrivacyDecisionTree](https://github.com/monaen/PrivacyDecisionTree)
 
 ## Requirements ##
 java JDK >= 1.8.0
