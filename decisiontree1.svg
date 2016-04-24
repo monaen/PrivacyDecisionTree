@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="decisiontree1.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="346.79066"
+     inkscape:cy="584.38242"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1215"
+     inkscape:window-height="1000"
+     inkscape:window-x="1345"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3877"
+       transform="translate(-97.578695,-27.274119)">
+      <rect
+         y="30.091455"
+         x="285.87683"
+         height="40.125"
+         width="104.03842"
+         id="rect2985"
+         style="fill:#0047ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00729609px;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3755"
+         y="60.07156"
+         x="293.81778"
+         style="font-size:29.0901432px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:23.2721138px;fill:#ffffff;fill-opacity:1;font-family:Tibetan Machine Uni;-inkscape-font-specification:Tibetan Machine Uni"
+           y="60.07156"
+           x="293.81778"
+           id="tspan3757"
+           sodipodi:role="line">Outlook</tspan></text>
+    </g>
+    <g
+       id="g3812"
+       transform="matrix(0.80587287,0,0,0.80587287,25.223124,39.408231)">
+      <rect
+         y="69.613754"
+         x="51.647766"
+         height="48.227337"
+         width="117.92786"
+         id="rect3796"
+         style="fill:#0e90ff;fill-opacity:1;stroke:#005eff;stroke-width:2.25998616;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3798"
+         y="101.80865"
+         x="60.609161"
+         style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Tibetan Machine Uni;-inkscape-font-specification:Tibetan Machine Uni"
+           y="101.80865"
+           x="60.609161"
+           id="tspan3800"
+           sodipodi:role="line">Sunny</tspan></text>
+    </g>
+    <g
+       id="g3864"
+       transform="translate(-20.644661,-33.335034)">
+      <rect
+         y="128.96344"
+         x="200.09029"
+         height="38.624405"
+         width="122.57336"
+         id="rect3796-5"
+         style="fill:#0e90ff;fill-opacity:1;stroke:#005eff;stroke-width:2.06195831;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3798-9"
+         y="154.78809"
+         x="207.1917"
+         style="font-size:32.23491669px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:25.78793144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Tibetan Machine Uni;-inkscape-font-specification:Tibetan Machine Uni"
+           y="154.78809"
+           x="207.1917"
+           id="tspan3800-9"
+           sodipodi:role="line">Overcast</tspan></text>
+    </g>
+    <g
+       id="g3872"
+       transform="translate(-26.664966,-33.335034)">
+      <rect
+         y="128.84309"
+         x="345.4725"
+         height="38.865101"
+         width="95.034859"
+         id="rect3796-8"
+         style="fill:#0e90ff;fill-opacity:1;stroke:#005eff;stroke-width:1.82126153;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3798-6"
+         y="154.78809"
+         x="356.69424"
+         style="font-size:32.23491669px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:25.78793144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;font-family:Tibetan Machine Uni;-inkscape-font-specification:Tibetan Machine Uni"
+           y="154.78809"
+           x="356.69424"
+           id="tspan3800-2"
+           sodipodi:role="line">Rainy</tspan></text>
+    </g>
+    <path
+       style="fill:none;stroke:#0000f8;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 239.30717,42.714713 0,52.022848"
+       id="path3857"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2.03566051;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 113.35612,95.226081 -0.5239,-27.239725 255.01046,0 0,28.248605"
+       id="path3859"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 238.84987,133.4452 0,37.28572"
+       id="path3912-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g4001"
+       transform="matrix(1.0442483,0,0,1.0442483,-144.60162,-137.09057)">
+      <rect
+         y="295.07248"
+         x="321.05399"
+         height="38.865101"
+         width="95.034859"
+         id="rect3796-54"
+         style="fill:#ff741e;fill-opacity:1;stroke:#d2560c;stroke-width:1.82126153;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3798-7"
+         y="322.44604"
+         x="347.56143"
+         style="font-size:32.23491669px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+         xml:space="preserve"><tspan
+           style="font-size:25.78793144px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#f9f9f9;font-family:Tibetan Machine Uni;-inkscape-font-specification:Tibetan Machine Uni"
+           y="322.44604"
+           x="347.56143"
+           id="tspan3800-4"
+           sodipodi:role="line">Yes</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="183.84776"
+       y="443.72241"
+       id="text3005"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3007"
+         x="183.84776"
+         y="443.72241"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Tibetan Machine Uni;-inkscape-font-specification:Tibetan Machine Uni">Step 1</tspan></text>
+  </g>
+</svg>
